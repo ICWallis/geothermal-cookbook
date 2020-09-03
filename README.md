@@ -1,2 +1,3 @@
-# geothermal
-Python tools for geothermal geoscientists, geochemists and reservoir engineers
+# Geothermal Cookbook
+
+Python methods for geoscientists, geochemists and reservoir engineers working in geothermal resources.
