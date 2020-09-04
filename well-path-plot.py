@@ -14,18 +14,18 @@ from mpl_toolkits.mplot3d import Axes3D
 import pandas as pd
 import math
 
-import fractoolbox as ftb
 # https://github.com/ICWallis/fractoolbox
+import fractoolbox as ftb
 
 #
-# Import well survey data
+# Import well survey data as a pandas dataframe
 #
 
 dfsurvey = pd.read_csv('testdata-survey.csv')
 #print(dfsurvey.head(2))
 
 #
-# Define the casing shoe
+# Define the casing shoe pandas dataframe
 #
 
 data = {
@@ -47,52 +47,9 @@ dfcasingshoe = dfcasingshoe.drop(['depth_mMDRFx'],1)
 #print(dfsurvey.head(2))
 
 #
-# Work out the x & y limits for the plot
-#
-# To make the scale 1:1 for a single well:
-#   Take the min X and Y values and add the well terminal depth (mVD)
-#
-# To make the scale 1:1 for multiple wells:
-#   Take the min X and Y values and then add
-#   either the plot depth or width, whichever is greater.
-#       Calculate the maximum horizontal distance including all wells 
-#       If it is greater that the terminal depth (mVD) of the deepest well, 
-#           then use the maximum horizontal distance
-#       Otherwise, use the terminal depth (mVD) of the deepest well
-
-Xmin = dfsurvey['easting_m'].min()
-Xmax = dfsurvey['easting_m'].max()
-print('\n','Xmin =', Xmin,'Xmax =', Xmax,'\n')
-
-Ymin = dfsurvey['northing_m'].min()
-Ymax = dfsurvey['northing_m'].max()
-print('Ymin =', Ymin,'Ymax =', Ymax,'\n')
-
-# Force the rounding direction
-def roundup(x):
-    return int(math.ceil(x / 1000.0)) * 1000
-def rounddown(x):
-    return int(math.floor(x / 1000.0)) * 1000
-
-YminR = rounddown(Ymin)
-YmaxR = roundup(Ymax)
-
-XminR = rounddown(Xmin)
-XmaxR = roundup(Xmax)
-
-# Top of the plot: 
-#   use 0 if you want the rig floor at the top of the plot
-Zshallowest = 0
-
-# Bottom of the plot: 
-#   set here to the well terminal depth but could be set deeper
-Zdeepest = dfsurvey['TVD_mRF'].max() 
-
-#
 # Plot the data
 #
 
-# Define the plot
 fig = plt.figure()
 ax = plt.axes(projection='3d')
 
@@ -114,18 +71,73 @@ ax.scatter(
     )
 
 #
-# Set axis limits
+# Set z axis limits
 #
-# Two options are provided for setting xy lims
-# Just comment-out the one that you do not want to use
+# This well plot method uses TVD so the Z axis arguments are plotted
+# in the reverse of the cartesian coordinate system, which means that
+# the values get larger in the downward direction
 
-# Set to x,y axis and allow matplotlib to set the ratio
-#ax.set_xlim(XminR,XmaxR)
-#ax.set_ylim(YminR,YmaxR)
+# Set the top of the plot: 
+#   use 0 if you want the rig floor at the top of the plot
+Zshallowest = 0
 
+# Set the bottom of the plot: 
+#   set here to the well terminal depth but could be set deeper
+Zdeepest = dfsurvey['TVD_mRF'].max() 
 
-# Set x,y axis to make the plot scale 1:1 (horozontal to vertical)
-# Arranged so the figure is centered on the collar (rig floor)
+ax.set_zlim(Zdeepest,Zshallowest)
+
+#
+# Set the xy axis limits
+#
+# Two methods are provided for setting xy lims
+# Just comment out the one you don't want to use
+
+# XYlims method 1: 
+#   Plot centred on the well but not 1:1 scale
+#   This method also forces rounding so the axis numbers plot nicely
+'''
+Xmin = dfsurvey['easting_m'].min()
+Xmax = dfsurvey['easting_m'].max()
+print('\n','Xmin =', Xmin,'Xmax =', Xmax,'\n')
+
+Ymin = dfsurvey['northing_m'].min()
+Ymax = dfsurvey['northing_m'].max()
+print('Ymin =', Ymin,'Ymax =', Ymax,'\n')
+
+def roundup(x):
+    return int(math.ceil(x / 1000.0)) * 1000
+def rounddown(x):
+    return int(math.floor(x / 1000.0)) * 1000
+
+YminR = rounddown(Ymin)
+YmaxR = roundup(Ymax)
+
+XminR = rounddown(Xmin)
+XmaxR = roundup(Xmax)
+
+ax.set_xlim(XminR,XmaxR)
+ax.set_ylim(YminR,YmaxR)
+'''
+
+# XYlims method 2: 
+#   Set x,y axis to make the plot scale 1:1 (horizontal to vertical)
+#  
+# To make the scale 1:1 for a single well:
+#   Take the min X and Y values and add the well terminal depth (mVD)
+#
+# To make the scale 1:1 for multiple wells:
+#   Take the min X and Y values that capture all the wells and then add
+#   either the plot depth or width, whichever is greater.
+#       Calculate the maximum horizontal distance including all wells 
+#       If it is greater that the terminal depth (mVD) of the deepest well, 
+#           then use the maximum horizontal distance
+#       Otherwise, use the terminal depth (mVD) of the deepest well
+#
+# This method also arranges the figure so it is centered on the casing shoe
+# Replacing dfcasingshoe with dfsurvey will arrange the figure so it's 
+# centred on the rig floor
+
 ax.set_xlim(
     dfcasingshoe.iloc[0]['easting_m'] - Zdeepest / 2,
     dfcasingshoe.iloc[0]['easting_m'] + Zdeepest / 2
@@ -136,15 +148,11 @@ ax.set_ylim(
     dfcasingshoe.iloc[0]['northing_m'] + Zdeepest / 2
     )
 
-# This well plot is in TVD so the Z axis arguments are plotted
-# in the reverse of the cartesian coordinate system
-ax.set_zlim(Zdeepest,Zshallowest)
-
 #
 # Format plot
 # 
 # A rage of options for formatting the plot
-# Just comment out the ones you do not want to use
+# Just comment out the ones you don't want to use
 
 # Get rid of axis tick labels
 ax.xaxis.set_ticklabels([])
