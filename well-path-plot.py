@@ -117,7 +117,7 @@ ax.scatter(
 # Set axis limits
 #
 # Two options are provided for setting xy lims
-# Just commet out the one that you do not want to use
+# Just comment-out the one that you do not want to use
 
 # Set to x,y axis and allow matplotlib to set the ratio
 #ax.set_xlim(XminR,XmaxR)
@@ -136,8 +136,8 @@ ax.set_ylim(
     dfcasingshoe.iloc[0]['northing_m'] + Zdeepest / 2
     )
 
-# This well plot is in TVD so the Z axis argumnets are plotted
-# in the reverse of the cartesian coordiate system
+# This well plot is in TVD so the Z axis arguments are plotted
+# in the reverse of the cartesian coordinate system
 ax.set_zlim(Zdeepest,Zshallowest)
 
 #
@@ -186,7 +186,7 @@ ax.zaxis.pane.fill = False
 #ax.view_init(elev=0.,azim=-90.)        # elevation view standing in the south and facing north 
 #ax.view_init(elev=0.,azim=0.)          # elevation view standing in the west and facing east
 ax.view_init(elev=0.,azim=-180.)        # elevation view standing in the east and facing west
-#ax.view_init(elev=90.,azim=-90.)       # plan view orented north 
+#ax.view_init(elev=90.,azim=-90.)       # plan view oriented north 
 #ax.view_init(elev=20,azim=-120.)       # oblique view 
 
 plt.show()
