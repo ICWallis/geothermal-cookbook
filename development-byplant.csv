@@ -1,0 +1,57 @@
+Reservior,Name,Comissioned,Type,Capacity_Mwe,NetGen_Mwe,Status,Owner
+Amedee,Amedee,1988,binary,1.6,,,
+Beowawe,Beowawe,1985,double flash,18.0,,,Beowawe Power LLC
+Beowawe,Beowawe 2,2011,binary,1.9,,,Terra-Gen Power
+Blue Mountain,Blue Mountain Faulkner,2009,binary,50.0,,,Altarock
+Bradys,Brady Hot Springs,1992,double flash,26.1,,,Ormat
+Coso,Coso Finance Partners Geothermal Plant,1987,flash,90.2,,,
+Coso,Coso Energy Developers Geothermal Plant,1988,flash,90.0,,,
+Coso,Coso Power Developers Geothermal Plant,1989,flash,90.0,,,
+Cove Fort,Cove Fort,2013,binary,25.0,,,ENEL Green Power (Oski Energy phase 2?)
+Desert Peak,Desert Peak (decommissioned),1985,flash,9.9,,decommissioned 1985,Unknown
+Desert Peak,Desert Peak,2006,binary,11.0,,,Ormat
+Dixie Valley,Dixie Valley,1988,double flash,64.0,,,Terra-Gen Operating Co.
+Dixie Valley,Dixie Valley 2,2012,binary,6.2,,operating,Terra-Gen Power
+Don Campbell,Don Campbell 1,2013,binary,26.0,,operating,Ormat
+Don Campbell,Don Campbell 2,2015,binary,16.0,,operating,Ormat
+Florida Canyon,Florida Canyon Mine,2012,binary,0.1,,operating,ElectraTherm
+Goodsprings,Goodsprings,2010,binary,7.0,,,NV Energy
+Hammersley Canyon,Hammersley Canyon,1984,binary,2.1,,failed,Unknown
+Jersey Valley,Jersey Valley,2010,binary,22.5,,,Ormat
+Klamath Falls,Klamath Falls 1,2010,binary,0.28,,,Oregon Institute of Technology
+Klamath Falls,Klamath Falls 2,2014,binary,1.75,,,Oregon Institute of Technology
+Lightening Dock,Lightening Dock,2013,binary,4.0,,,Unknown
+Mammoth,Casa Diablo 1,1984,binary,10.0,,,Ormat
+Mammoth,Casa Diablo 2,1990,binary,10.0,,,Ormat
+Mammoth,Casa Diablo 3,1990,binary,10.0,,,Ormat
+McGinness Hills,McGinness Hills 1,2012,binary,45.0,,,Ormat
+McGinness Hills,McGinness Hills 2,2015,binary,45.0,,,Ormat
+McGinness Hills,McGinness Hills 3,2018,binary,48.0,,,Ormat
+Neal Hot Springs,Neal Hot Springs,2012,binary,33.0,22.0,,U.S. Geothermal Inc.
+Paisley,Paisley,2014,binary,3.0,,,Surprise Valley Eletric Corp
+Patua ,Patua,2013,binary,30.0,15.0,,Cyrq
+Raft River,Raft River,2008,binary,15.8,,,U.S. Geothermal Inc.
+Rockford Ranch,Rockford Ranch,1982,binary,0.04,,,Unknown
+Roosevelt,Blundell Geothermal Power Plant,1984,flash,26.0,,,Pacific Corp
+Roosevelt,Blundell Unit 2,2007,binary,11.0,,,Pacific Corp
+Salt Wells,Salt Wells,2009,binary,23.6,20.2,,Enel Green Power
+San Emidio,San Emidio (Empire),1987,binary,3.6,,,U.S. Geothermal
+San Emidio,San Emidio Repower,2012,binary,11.8,,,U.S. Geothermal
+Soda Lake,Soda Lake,1987,binary,5.1,,,Cyrq
+Soda Lake,Soda Lake II,1991,binary,18.0,,,Cyrq
+Steamboat,Steamboat 1,1986,binary,8.4,,,Ormat
+Steamboat,Steamboat 1A,1988,binary,2.4,,,Ormat
+Steamboat,Steamboat Hills ,1988,binary,,,,Ormat
+Steamboat,Steamboat 2,1992,,13.4,,,Ormat
+Steamboat,Steamboat 3,1992,binary,13.4,,,Ormat
+Steamboat,Richard Burdett (Galena I),2005,binary,26.0,,Operating,Ormat
+Steamboat,Galena II,2007,binary,13.0,,,Ormat
+Steamboat,Galena III,2008,binary,26.5,,,Ormat
+Stillwater,Stillwater,2009,binary,47.3,,,Enel NA
+Thermo,Thermo,2009,binary,10.3,,,Cirq
+Tungsten,Tungsten,2017,binary,24.0,,,Ormat
+Tuscaroa,Tuscaroa 1,2012,binary,18.0,,,Ormat
+Wabuska,Wabuska 1,1984,binary,0.8,,,Homestretch Geothermal / Sierra Pacific Power
+Wabuska,Wabuska 2,1987,binary,0.8,,,Homestretch Geothermal / Sierra Pacific Power
+Wabuska,Wabuska 3 (plus),2003,4,,,,Homestretch Geothermal / Sierra Pacific Power
+Wendel,Wendel,1985,binary,0.7,,,Unknown
