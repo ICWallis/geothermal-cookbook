@@ -2,6 +2,10 @@
 
 Python methods for geoscientists, geochemists and reservoir engineers working in geothermal resources.
 
+## development-US-Basin-and-Range.ipynb
+
+Analysis of installed MWe by reservoir and power plant in the US Basin and Range province based on publicly available data. 
+
 ## 3D-well-plot.py
 
 Use matplotib to generate an interactive 3D visualisation of the well path and points along that path, such as a production casing shoe or feedzone(s). A static plot (oblique, section or plan view) may also be exported.
