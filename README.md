@@ -8,6 +8,11 @@ Analysis of installed MWe by in the US Basin and Range province based on publicl
 
 The Juypter Notebook demonstrates sorted bar plot and histogram methods using matplotlib, as well as probably density functions using a kernel density estimation method. Statistical methods built into Pandas are also used.
 
+You need the .csv data in the same folder you run this .ipynb from:
+- development-byplant.csv
+- development-byreservoir.csv
+- development-byreservoir-trimmed.csv
+
 ## 3D-well-plot.py
 
 Use matplotib to generate an interactive 3D visualisation of the well path and points along that path, such as a production casing shoe or feedzone(s). A static plot (oblique, section or plan view) may also be exported.
@@ -22,7 +27,7 @@ Apache 2.0
 
 https://choosealicense.com/licenses/apache-2.0/
 
-### Development
+## Development
 
 To date, this repository contains code developed by [Irene Wallis](https://www.cubicearth.nz/). 
 
