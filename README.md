@@ -4,7 +4,9 @@ Python methods for geoscientists, geochemists and reservoir engineers working in
 
 ## development-US-Basin-and-Range.ipynb
 
-Analysis of installed MWe by reservoir and power plant in the US Basin and Range province based on publicly available data. 
+Analysis of installed MWe by in the US Basin and Range province based on publicly available data. 
+
+The Juypter Notebook demonstrates sorted bar plot and histogram methods using matplotlib, as well as probably density functions using a kernel density estimation method. Statistical methods built into Pandas are also used.
 
 ## 3D-well-plot.py
 
