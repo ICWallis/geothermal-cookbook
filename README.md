@@ -23,7 +23,7 @@ You need the .csv data in the same folder you run this .ipynb from:
 
 ## ternary-plots.ipynb
 
-Ternary plots are a key tool for geothermal geochemistry. However, these plots are not included in the standard Python libraries. This notebook demonstrates how the [ternary package](https://github.com/marcharper/python-ternary) can be used to generate a water type plot. The ternary package needs to be installed in your environment:
+Ternary plots are a key tool for geothermal geochemistry. However, these plots are not included in matplotlib. This notebook demonstrates how the [ternary package](https://github.com/marcharper/python-ternary) can be used to generate a ternary plot (geothermal water type example). The ternary package needs to be installed in your environment:
 
 > pip install python-ternary
 
