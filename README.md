@@ -27,6 +27,10 @@ Ternary plots are a key tool for geothermal geochemistry. However, these plots a
 
 > pip install python-ternary
 
+## wellpath-calculator.ipynb
+
+Work in progress
+
 ## License
 
 Apache 2.0 
